@@ -14,6 +14,11 @@ async function scrapeLinkedIn(url, sessionCookie) {
   options.addArguments('--disable-dev-shm-usage');
   options.addArguments('--no-sandbox');
   options.addArguments('--disable-gpu');
+  options.addArguments('--headless');
+  options.addArguments('--remote-debugging-port=9222');
+  options.addArguments('--disable-software-rasterizer');
+  options.addArguments('--single-process');
+  options.addArguments('--no-zygote');
   options.addArguments('--start-maximized');
 
   // Set a random user agent
